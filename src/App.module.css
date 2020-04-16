@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quantico:wght@700&display=swap');
+
+body {
+    background-color: #EEEEEE;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.virusTitle {
+    text-align: center;
+    justify-items: center;
+    font-family: 'Quantico', sans-serif;
+    font-size: 5em;
+    margin: 50px 0 0 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 0 10%;
+    }
+    .virusTitle {
+        font-size: 3em;
+    }
+}
+

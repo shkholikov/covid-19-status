@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Quantico:wght@400;700&display=swap');
+
+.footer {
+    font-family: 'Quantico', sans-serif;
+    font-size: 1em;
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 0.8em;
+    }
+}
