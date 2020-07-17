@@ -19,12 +19,24 @@ body {
     margin: 50px 0 0 0;
 }
 
+.subTitle {
+    font-family: 'Quantico', sans-serif;
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     .container {
         margin: 0 10%;
     }
+
     .virusTitle {
         font-size: 3em;
+    }
+
+    .subTitle {
+        font-size: 1.5em
     }
 }
 

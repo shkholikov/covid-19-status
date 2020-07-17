@@ -25,14 +25,16 @@ class App extends React.Component {
         console.log(fetchedData)
     }
 
+
     render() {
         const {data, country} = this.state;
 
         return (
             <div className={styles.container}>
                 <h3 className={styles.virusTitle}>C🦠VID-19 ONLINE STATUS</h3>
-                <Cards data={data}/>
+                <h5 className={styles.subTitle}>Stay at Home🏠</h5>
                 <CountryPicker handleCountryChange={this.handleCountryChange}/>
+                <Cards data={data}/>
                 <Chart data={data} country={country}/>
                 <StickyFooter/>
             </div>

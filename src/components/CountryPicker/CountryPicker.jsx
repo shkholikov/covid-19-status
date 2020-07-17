@@ -3,6 +3,7 @@ import {NativeSelect, FormControl, Typography} from "@material-ui/core";
 import styles from './CountryPicker.module.css'
 import {fetchCountries} from "../../api";
 
+
 const CountryPicker = ({handleCountryChange}) => {
     const [fetchedCountries, setFetchedCountries] = useState([])
 
@@ -13,6 +14,8 @@ const CountryPicker = ({handleCountryChange}) => {
         fetchAPI()
     }, [setFetchedCountries]);
 
+
+
     return (
         <FormControl className={styles.formControl}>
             <Typography color="textSecondary">Please choose your country or region📍</Typography>
@@ -21,6 +24,7 @@ const CountryPicker = ({handleCountryChange}) => {
                 {fetchedCountries.map((country, i) => <option key={i} value={country}>{country}</option>)}
             </NativeSelect>
         </FormControl>
+
     )
 };
 

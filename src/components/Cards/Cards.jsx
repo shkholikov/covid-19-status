@@ -4,10 +4,11 @@ import styles from './Cards.module.css'
 import CountUp from "react-countup";
 import cx from 'classnames'
 
-const Cards = ({data: {confirmed, recovered, deaths, lastUpdate}}) => {
+const Cards = ({data: {confirmed, recovered, deaths, lastUpdate, active}}) => {
     if (!confirmed) {
         return 'Loading...'
     }
+    console.log(active);
     return (
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
