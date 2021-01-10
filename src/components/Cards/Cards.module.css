@@ -23,3 +23,10 @@
         margin: 2% 2% 2% 2% !important;
     }
 }
+
+.loading { 
+    font-family: 'Quantico', sans-serif;
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0;
+}

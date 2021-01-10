@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react";
-import {fetchDailyData} from "../../api";
-import {Line, Bar} from "react-chartjs-2";
+import React, { useState, useEffect } from "react";
+import { fetchDailyData } from "../../api";
+import { Line, Bar } from "react-chartjs-2";
 import styles from './Chart.module.css'
 
 
-const Chart = ({data: { confirmed, recovered, deaths}, country}) => {
+const Chart = ({ data: { confirmed, recovered, deaths }, country }) => {
     const [dailyData, setDailyData] = useState([]);
 
     useEffect(() => {
@@ -14,20 +14,20 @@ const Chart = ({data: { confirmed, recovered, deaths}, country}) => {
 
 
         fetchAPI();
-    },[]);
+    }, []);
 
     const lineChart = (
         dailyData.length
             ? (
                 <Line data={{
-                    labels: dailyData.map(({date}) => date), datasets: [{
-                        data: dailyData.map(({confirmed}) => confirmed),
+                    labels: dailyData.map(({ date }) => date), datasets: [{
+                        data: dailyData.map(({ confirmed }) => confirmed),
                         label: 'Infected',
                         borderColor: '#FFDC00',
                         backgroundColor: 'rgba(100, 93, 0, 0.1)',
                         fill: true
                     }, {
-                        data: dailyData.map(({deaths}) => deaths),
+                        data: dailyData.map(({ deaths }) => deaths),
                         label: 'Deaths',
                         borderColor: '#FF4136',
                         backgroundColor: 'rgba(255, 0, 0, 0.5)',
@@ -50,8 +50,8 @@ const Chart = ({data: { confirmed, recovered, deaths}, country}) => {
                         }]
                     }}
                     options={{
-                        legend: {display: false},
-                        title: {display: true, text: `Current state in ${country}`}
+                        legend: { display: false },
+                        title: { display: true, text: `Current state in ${country}` }
                     }}
                 />
             ) : null
